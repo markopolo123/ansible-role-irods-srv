@@ -14,7 +14,7 @@
 
 - name: overwrite_localIrodsUser_with_DBUser_for_icat
   set_fact:
-    localIrodsUser: "{{ irods.catalogue.db_username }}"
+    localIrodsUser: "{{ irods_catalogue_db_username }}"
   when: ansible_fqdn == irods.catalogue.address
 
 - name: create_unattended_installation_json

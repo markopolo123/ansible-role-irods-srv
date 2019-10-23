@@ -33,12 +33,12 @@
         {% if irods_host.type == "provider" %}
         "database": {
             "postgres": {
-                "db_host": "{{ irods.catalogue.db_host }}",
-                "db_name": "{{ irods.catalogue.db_name }}",
+                "db_host": "{{ irods_catalogue_db_host }}",
+                "db_name": "{{ irods_catalogue_db_name }}",
                 "db_odbc_driver": "PostgreSQL",
-                "db_password": "{{ irods.catalogue.db_password }}",
+                "db_password": "{{ irods_catalogue_db_password }}",
                 "db_port": 5432,
-                "db_username": "{{ irods.catalogue.db_username }}"
+                "db_username": "{{ irods_catalogue_db_username }}"
             }
         },
         {% endif %}

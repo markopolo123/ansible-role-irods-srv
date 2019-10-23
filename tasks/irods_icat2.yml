@@ -13,18 +13,18 @@
 
 - name: create_irods_user
   postgresql_user:
-    name: "{{ irods.catalogue.db_user }}" 
-    password: "{{ irods.catalogue.db_password }}"
+    name: "{{ irods_catalogue_db_user }}" 
+    password: "{{ irods_catalogue_db_password }}"
 
 - name: create_irods_database
   postgresql_db:
       state: present
-      name: "{{ irods.catalogue.db_name }}"
+      name: "{{ irods_catalogue_db_name }}"
       
 
 - name: grant_icat_user_permissions_on_DB
   postgresql_privs:
-    database: "{{ irods.catalogue.db_name }}"
+    database: "{{ irods_catalogue_db_name }}"
     privs: ALL
     type: table
     objs: ALL_IN_SCHEMA
