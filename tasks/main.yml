@@ -1,6 +1,3 @@
-- name: InstallSomePrerequirements
-  include: prereq.yml
-
 - name: ConfigureIrodsRepository
   include: irods-repo.yml
 
