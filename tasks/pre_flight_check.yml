@@ -1,0 +1,16 @@
+
+- name: "make sure postgres is running"
+  service:
+    name: postgresql
+    state: started
+    enabled: yes
+  register: postgres
+
+- name: "exit if postgres is not running and let us know"
+  block:
+    - debug:
+        msg: "go install postgres then run again"
+
+    - meta:
+        end_play
+  when: postgres.rc != 0

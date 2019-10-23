@@ -1,13 +1,19 @@
+
+- name: pre flight check
+  tasks_from: pre_flight_check.yml
+  when: ansible_hostname is irods-catalogue
+
+
 - name: ConfigureIrodsRepository
   include: irods-repo.yml
 
-- name: configure_iCAT_database
-  include:  irods_icat.yml
-  when:  ansible_fqdn == irods.catalogue.address
-  tags: 
-  - irods_cat
-  - role_irodsServer
-  - irods
+# - name: configure_iCAT_database
+#   include:  irods_icat.yml
+#   when:  ansible_fqdn == irods.catalogue.address
+#   tags: 
+#   - irods_cat
+#   - role_irodsServer
+#   - irods
 
 - name: install_irods_server
   include: irods_install.yml
