@@ -9,7 +9,7 @@
 
 # - name: configure_iCAT_database
 #   include:  irods_icat.yml
-#   when:  ansible_fqdn == irods.catalogue.address
+#   when:  ansible_fqdn == irods.catalogue_address
 #   tags: 
 #   - irods_cat
 #   - role_irodsServer
