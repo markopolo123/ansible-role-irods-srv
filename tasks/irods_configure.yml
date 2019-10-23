@@ -1,13 +1,13 @@
 - name: deploy_hosts_config_json
   template:
     src: hosts_config.json.j2
-    dest: /etc/irods/hosts_config.json
+    path: /etc/irods/hosts_config.json
     backup: yes
 
 - name: deploy_server_config_json
   template:
     src: server_config.json.j2
-    dest: /etc/irods/server_config.json
+    path: /etc/irods/server_config.json
     backup: yes
   notify:
   - restart irods
@@ -21,7 +21,7 @@
 - name: deploy_service_account_irods_environment
   template:
     src: service_account_environment.j2
-    dest: "{{ getent_passwd[localIrodsUser][4] }}/.irods/irods_environment.json"
+    path: "{{ getent_passwd[localIrodsUser][4] }}/.irods/irods_environment.json"
     owner: "{{ localIrodsUser }}"
     mode: 0600
 

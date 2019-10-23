@@ -11,6 +11,6 @@
 - name: deploy_irods_pam_configuration
   template:
     src: pam_irods.j2
-    dest: /etc/pam.d/irods
+    path: /etc/pam.d/irods
     mode: 0644
     owner: root 
