@@ -5,7 +5,8 @@ irodsServer_serverControlPlaneKey: cxnvUXXXXXXXXXxxxxxxxxxxxxxxxxNQ
 irodsServer_adminPassowrd:  testPass
 
 # database informations
-irods_catalogue_db_username:
-irods_catalogue_db_password:
-irods_catalog_db_name:
-irods_catalogue_db_host:
+irods_catalogue_db_username: #postgres username
+irods_catalogue_db_password: #postgres user password
+irods_catalog_db_name: #irods
+irods_catalogue_db_host: #"/var/run/postgresql/"
+irods_catalogue_db_address: #"{{ ansible_fqdn }}"
