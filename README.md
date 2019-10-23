@@ -1,22 +1,45 @@
-# ansible-role-irods-srv
-Repository for ansible role installing and configuring irods (catalogue or resource) servers. The goal of this role is to provide a comprehensive way to install and manage iRODS grids with round-robin DNS loadbalancing of servers.
+Role Name
+=========
 
-## Quick start with Vagrant
-### Requirements
-Obviously you need vagrant - the installation was tested on vagrant 2.4.4 with ```vagrant-libvirt``` provisioner, but the box used should work on other popular provisioners like virtualbox and vmware.
+A brief description of the role goes here.
 
-Vagrant file makes use of ```vagrant-hosts``` plugin, you can install it executing: ```vagrant plugin install vagrant-hosts```
-
-You also need ansible to run the provisioner. The setup was tested on ansible 2.5.1.
-### Commands to use
-If you just want to give it a try, you can just clone the repository:
-```
-git clone https://github.com/cinek810/ansible-role-irods-srv.git
-```
-and start three VMs (one server and 2 resources):
-```
-cd ansible-role-irods-srv ; 
-vagrant up
-```
+[![Build Status](https://travis-ci.org/CyVerse-Ansible/ansible-role-template.svg?branch=master)](https://travis-ci.org/CyVerse-Ansible/ansible-role-template)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-name--of--my--role-blue.svg)](https://galaxy.ansible.com/CyVerse-Ansible/ansible-role-template/)
 
 
+Requirements
+------------
+
+Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+
+Role Variables
+--------------
+
+A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+
+| Variable                | Required | Default | Choices                   | Comments                                 |
+|-------------------------|----------|---------|---------------------------|------------------------------------------|
+| foo                     | no       | false   | true, false               | example variable                         |
+| bar                     | yes      |         | eggs, spam                | example variable                         |
+
+Dependencies
+------------
+
+A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+
+Example Playbook
+----------------
+
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+
+    - hosts: all
+      roles:
+         - ansible-role-template
+
+License
+-------
+
+See license.md
+
+Author Information
+------------------
