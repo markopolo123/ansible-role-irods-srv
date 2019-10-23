@@ -4,3 +4,8 @@ irodsServer_zoneKey: cxnvUXXXXXXXXXxxxxxxxxxxxxxxxeNQ
 irodsServer_serverControlPlaneKey: cxnvUXXXXXXXXXxxxxxxxxxxxxxxxxNQ
 irodsServer_adminPassowrd:  testPass
 
+# database informations
+irods_catalogue_db_username:
+irods_catalogue_db_password:
+irods_catalog_db_name:
+irods_catalogue_db_host:
