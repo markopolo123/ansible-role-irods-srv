@@ -1,7 +1,6 @@
 
-- name: pre flight check
-  tasks_from: pre_flight_check.yml
-  when: ansible_hostname is irods-catalogue
+- name: "pre flight check"
+  include: pre_flight_check.yml
 
 
 - name: ConfigureIrodsRepository
