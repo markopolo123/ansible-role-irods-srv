@@ -1,10 +1,7 @@
 
 - name: "make sure postgres is running"
-  service:
-    name: postgresql
-    state: started
-    enabled: yes
-  register: postgres
+  command: "systemctl status postgres.service"
+  register: postgres_status
 
 - name: "exit if postgres is not running and let us know"
   block:
@@ -13,4 +10,4 @@
 
     - meta:
         end_play
-  when: postgres.rc != 0
+  when: "'running' not in postgres_status.stdout"
